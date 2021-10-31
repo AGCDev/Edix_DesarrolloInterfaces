@@ -1,0 +1,62 @@
+#precioArticulo {
+    margin-top: 15px;
+    margin-left: 12px;
+}
+
+#unidades {
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 40px;
+}
+
+#botonAddCarrito {
+    margin-top: 15px;
+}
+
+#articulosCarrito {
+    margin-top: 30px;
+    margin-left: 15px;
+    width: 30%;
+}
+
+#precioTotalCarrito {
+    margin-top: 15px;
+    margin-left: 12px;
+}
+
+#condicionesCompra {
+    margin-top: 90px;
+}
+
+#seleccionarFormaPago {
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+#opcionTarjeta {
+    margin-top: 30px;
+}
+
+#titularTarjeta {
+    margin-left: 10px;
+}
+
+#numeroTarjeta {
+    margin-top: 15px;
+}
+
+#divCodigoSeguridadTarjeta {
+    margin-top: 15px;
+}
+
+#opcionEfectivo {
+    margin-top: 30px;
+}
+
+#botones {
+    margin-top: 15px;
+}
+
+#botonImprimir {
+    margin-right: 15px;
+}
