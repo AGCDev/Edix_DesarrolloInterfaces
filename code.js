@@ -99,6 +99,7 @@ function comprobacionCampos() {
     nomArticulo.value = "";
     precioArticulo.value = "";
     nomArticulo.focus();
+    numUnidades.value = 1;
 
 }
 
@@ -116,6 +117,7 @@ function faltaPrecioArticulo() {
 function enviarCarrito() {
     addCarrito.addEventListener("click", comprobacionCampos);
     nomArticulo.focus();
+
 }
 
 function cargarPago() {
@@ -165,10 +167,17 @@ function imprimirAlertas() {
 
 function checkBoxActivacion() {
     normasCompra.addEventListener("click", imprimirHabilitado);
+
 }
 
 function imprimirHabilitado() {
-    botonImprimir.disabled = false;
+
+    if (normasCompra.checked) {
+        botonImprimir.disabled = false;
+    } else {
+        botonImprimir.disabled = true;
+    }
+
 }
 
 function rellenarPagoEfectivo() {
