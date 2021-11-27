@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <script src="code.js"></script>
+    <title>Alejandro Garcia de la Cruz</title>
+
+</head>
+
+<body>
+    <div id= "contenedor">
+        <form name="formulario" action="" method="post">
+            <div>
+                Nombre artículo: <input type="text" name="nombreArticulo" id="nombreArticulo" autofocus><span id="spanArticulo"> falta articulo</span>
+
+            </div>
+
+            <div>
+                Precio artículo: <input type="text" name="precioArticulo" id="precioArticulo"> €<span id="spanPrecio"> tipo de dato incorrecto</span>
+
+            </div>
+
+            <div>
+                Unidades: <input type="number" name="" id="unidades" selected value="1" min="1">
+
+            </div>
+
+            <div>
+                <input type="button" value="Añadir al carrito" id="botonAddCarrito">
+            </div>
+
+            <div>
+                Artículos en el carrito: <input type="text" name="" id="articulosCarrito">
+            </div>
+
+            <div>
+                Precio total del carrito: <input type="text" name="" id="precioTotalCarrito" value=""> €
+            </div>
+
+            <div>
+                Forma de pago: <select name="pago" id="seleccionarFormaPago">
+                                    <option value="seleccione">--Seleccione--</option>
+                                    <option value="tarjeta">Tarjeta</option>
+                                    <option value="efectivo">Efectivo</option>
+                                </select>
+            </div>
+
+            <div id="opcionTarjeta">
+                <div id="divTitularTarjeta">
+                    Titular tarjeta: <input type="text" id="titularTarjeta">
+                </div>
+                <div id="divNumeroTarjeta">
+                    Número tarjeta: <input type="text" id="numeroTarjeta">
+                </div>
+                <div id="divCodigoSeguridadTarjeta">
+                    CVV: <input type="text" id="codigoSeguridadTarjeta">
+                </div>
+            </div>
+
+            <div id="opcionEfectivo">
+                Importe efectivo: <input type="text" id="importeEfectivo"> 
+            </div>
+
+            <div>
+                <input type="checkbox" name="" id="condicionesCompra"> Acepto las condiciones de compra
+            </div>
+
+            <div id="botones">
+                <input type="button" value="Imprimir" id="botonImprimir" disabled="true">
+                <input type="reset" value="Restablecer" id="botonRestablecer">
+            </div>
+        </form>
+    </div>
+</body>
+<footer id="footer">
+    <div id="enunciado">Actividad creada por:</div>
+    <div id="creadores">Alejandro García De la cruz y César Ramírez García.</div>    
+</footer>
+
+</html>
