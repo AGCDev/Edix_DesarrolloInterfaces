@@ -2,13 +2,15 @@ package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 
 import vista.Ventana;
-
-
 
 
 public class ManejadorEventos implements ActionListener{
@@ -49,7 +51,16 @@ public class ManejadorEventos implements ActionListener{
 				}
 				
 				if (e.getSource() == ventana.getBotonRaizCuadrada()) {
-					
+					try {
+						
+						File file = new File("audio/EXPLOBIG.wav");
+						AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
+						Clip clip = AudioSystem.getClip();
+						clip.open(audioStream);
+						clip.start();
+					} catch (Exception e2) {
+						// TODO: handle exception
+					}
 					JOptionPane.showMessageDialog(null, "Funcionalidad no disponible", "Información", JOptionPane.INFORMATION_MESSAGE);
 					
 				}

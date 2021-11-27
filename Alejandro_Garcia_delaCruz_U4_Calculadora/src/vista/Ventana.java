@@ -1,14 +1,19 @@
 package vista;
 
 import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
 import java.awt.Image;
 import java.util.List;
 
 import javax.swing.*;
+import javax.swing.text.StyledEditorKit.BoldAction;
 
 import controlador.ManejadorEventos;
 
-public class Ventana extends JFrame{
+public class Ventana extends javax.swing.JFrame{
+	
+	
 	
 	private JLabel etiqueta1, etiqueta2, etiqueta3, imagenPortada;
 	private JTextField cajaTexto1, cajaTexto2;
@@ -21,7 +26,6 @@ public class Ventana extends JFrame{
 		setLocationRelativeTo(null);
 		setTitle("Calculadora");
 		setLayout(null);
-		
 		inicializarComponentes();
 		
 		setResizable(false);
@@ -35,16 +39,21 @@ public class Ventana extends JFrame{
 		imagenPortada.setIcon(new ImageIcon("imagenes/anonymous2.png"));
 		add(imagenPortada);
 		
+		
+		
 		etiqueta1 = new JLabel("Numero 1:");
 		etiqueta1.setBounds(35, 148, 76, 30);
+		etiqueta1.setForeground(Color.RED);
 		add(etiqueta1);
 		
 		etiqueta2 = new JLabel("Numero 2:");
 		etiqueta2.setBounds(35, 180, 76, 30);
+		etiqueta2.setFont(new Font("Arial", Font.BOLD, 12));
 		add(etiqueta2);
 		
 		etiqueta3 = new JLabel("Resultado: ");
 		etiqueta3.setBounds(35, 370, 200, 30);
+		etiqueta3.setForeground(Color.BLUE);
 		add(etiqueta3);
 		
 		cajaTexto1 = new JTextField();
@@ -80,12 +89,12 @@ public class Ventana extends JFrame{
 		botonRaizCubica.setBounds(180, 310, 120, 30);
 		add(botonRaizCubica);
 		
-		/*
+		
 		panel = new JPanel();
 		panel.setBounds(0, 0, 350, 450);
-		
+		panel.setForeground(Color.BLUE);
 		add(panel);
-		*/
+		
 	}
 	
 	public void establecerManejador(ManejadorEventos manejador) {
