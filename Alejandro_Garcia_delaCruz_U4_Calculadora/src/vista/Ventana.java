@@ -4,8 +4,13 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.image.ImageObserver;
+import java.awt.image.ImageProducer;
+import java.io.File;
 import java.util.List;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.text.StyledEditorKit.BoldAction;
 
@@ -13,13 +18,12 @@ import controlador.ManejadorEventos;
 
 public class Ventana extends javax.swing.JFrame{
 	
-	
-	
 	private JLabel etiqueta1, etiqueta2, etiqueta3, imagenPortada;
 	private JTextField cajaTexto1, cajaTexto2;
 	private JButton botonSumar, botonRestar, botonMultiplicar, botonDividir, botonRaizCuadrada, botonRaizCubica;
 	private JPanel panel;
 
+	
 	public Ventana() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(350, 450);
@@ -27,9 +31,9 @@ public class Ventana extends javax.swing.JFrame{
 		setTitle("Calculadora");
 		setLayout(null);
 		inicializarComponentes();
-		
 		setResizable(false);
 		setVisible(true);
+		
 	}
 	
 	private void inicializarComponentes() {
@@ -39,8 +43,6 @@ public class Ventana extends javax.swing.JFrame{
 		imagenPortada.setIcon(new ImageIcon("imagenes/anonymous2.png"));
 		add(imagenPortada);
 		
-		
-		
 		etiqueta1 = new JLabel("Numero 1:");
 		etiqueta1.setBounds(35, 148, 76, 30);
 		etiqueta1.setForeground(Color.RED);
@@ -49,6 +51,7 @@ public class Ventana extends javax.swing.JFrame{
 		etiqueta2 = new JLabel("Numero 2:");
 		etiqueta2.setBounds(35, 180, 76, 30);
 		etiqueta2.setFont(new Font("Arial", Font.BOLD, 12));
+		etiqueta2.setForeground(Color.GREEN);
 		add(etiqueta2);
 		
 		etiqueta3 = new JLabel("Resultado: ");
@@ -92,7 +95,8 @@ public class Ventana extends javax.swing.JFrame{
 		
 		panel = new JPanel();
 		panel.setBounds(0, 0, 350, 450);
-		panel.setForeground(Color.BLUE);
+		panel.setBackground(Color.black);
+		panel.setOpaque(true);
 		add(panel);
 		
 	}
@@ -145,5 +149,7 @@ public class Ventana extends javax.swing.JFrame{
 	public JPanel getPanel() {
 		return panel;
 	}
-
+	
 }
+
+

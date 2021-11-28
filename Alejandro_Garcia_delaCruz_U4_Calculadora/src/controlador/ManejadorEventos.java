@@ -83,7 +83,16 @@ public class ManejadorEventos implements ActionListener{
 					       
 							numeroIntroducido = Double.parseDouble(JOptionPane.showInputDialog(null,"Introduce un numero para obtener su raiz cúbica: "));
 							double raizCubica = Math.cbrt(numeroIntroducido);
-							 
+							try {
+								
+								File file = new File("audio/laser.wav");
+								AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
+								Clip clip = AudioSystem.getClip();
+								clip.open(audioStream);
+								clip.start();
+							} catch (Exception e2) {
+								// TODO: handle exception
+							}
 							ventana.getEtiqueta3().setText("El resultado es: " + raizCubica);		
 							
 						}else {
